@@ -1,0 +1,18 @@
+{
+  "application": {
+    "name": "PromptCrusher Pro",
+    "version": "1.0.0-beta",
+    "environment": "distribution"
+  },
+  "security_limits": {
+    "subject_max_length": 200,
+    "api_rate_limit_rpm": 15
+  },
+  "ui_strings": {
+    "title_heading": "💥 Prompt Crusher Pro",
+    "subtitle_description": "Select your architecture framework and feed subjects to generate optimized standalone Super Prompts.",
+    "input_placeholder": "e.g., marketing archetypes, python code refactoring",
+    "btn_text_idle": "Generate Super Prompt",
+    "btn_text_loading": "Crushing Prompt Matrix... Please Wait..."
+  }
+}

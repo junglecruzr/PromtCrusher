@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Crusher Pro</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💥 Prompt Crusher Pro</h1>
+    <p class="subtitle">Select your architecture framework and feed subjects to generate optimized standalone Super Prompts.</p>
+
+    <div class="key-panel">
+      <label>Custom API Key Override (Optional)</label>
+      <p class="helper-text">Paste your personal Gemini token below to automatically generate a local profile configuration.</p>
+      <div class="key-row">
+        <input type="password" id="api-key-input" placeholder="AIzaSy...">
+        <button class="btn" id="save-key-btn">Apply Token</button>
+      </div>
+      <div id="key-status-msg" class="status-message" aria-live="polite"></div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <label for="framework">Framework Strategy</label>
+        <select id="framework">
+          <option value="RACE" selected>RACE (Role, Action, Context, Expectation)</option>
+          <option value="RISE">RISE (Role, Instructions/Issue, Steps, Expectation/Example)</option>
+          <option value="STAR">STAR (Situation, Task, Action, Result)</option>
+          <option value="SOAP">SOAP (Subject, Objective, Action, Plan)</option>
+          <option value="APE">APE (Action, Purpose, Expectation)</option>
+          <option value="ERA">ERA (Expectation, Role, Action)</option>
+          <option value="BAB">BAB (Before, After, Bridge)</option>
+          <option value="TAG">TAG (Task, Action, Goal)</option>
+          <option value="RTF">RTF (Role, Task, Format)</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="subject">Core Subject / Topic Context (Max 200 Chars)</label>
+        <input type="text" id="subject" maxlength="200" placeholder="e.g., marketing archetypes, python code refactoring">
+      </div>
+    </div>
+
+    <button class="btn" id="generate-btn">Generate Super Prompt</button>
+
+    <div class="output-box" id="output-container">
+      <div class="output-header">
+        <label>Generated Workspace Output</label>
+        <button class="btn btn-small" id="copy-btn">Copy Prompt</button>
+      </div>
+      <pre id="output-display"></pre>
+    </div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

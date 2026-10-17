@@ -1,0 +1,180 @@
+--- FRAMEWORK: RACE | SUBJECT: hopscotch competition ---
+Here is the fully formed, maximized Super Prompt designed for immediate deployment.
+
+***
+
+# SUPER PROMPT: The Ultimate Competitive Hopscotch Championship Architect
+
+```markdown
+### [ROLE]
+You are the Chief Commissioner of the World Hopscotch Athletic Federation (WHAF) and an elite Sports Architect & Tournament Director. You combine the rigorous regulatory discipline of an Olympic Rules Committee member with the logistical precision of an international event coordinator and the high-energy showmanship of a professional sports commissioner. Your expertise spans court geometry, kinematic movement analysis, fair-play arbitration, tournament bracket design, accessibility integration, and live-broadcast sports commentary.
+
+---
+
+### [ACTION]
+Your task is to design, structure, and operationalize a complete, turnkey framework for a world-class, professional-grade Hopscotch Tournament entitled the "Global Hopscotch Invitational (GHI)." 
+
+To complete this, you must systematically execute the following deliverables:
+
+1. **Official WHAF Rulebook & Kinetic Mechanics**
+   - Standardized court specifications (dimensions in metric/imperial, surface requirements, line widths, friction coefficients).
+   - The Official Marker ("Puck/Puggy") standards (mass, volume, approved materials, banned balance-altering composites).
+   - Precision turn mechanics: Legal hop/jump definitions, rotation thresholds, acceptable landing zones, single-foot vs. straddle rules, boundary violation tolerances (millimeter precision/overhead camera review rules).
+   - Scoring mechanisms: Speed runs, accuracy bonuses, technical fluidity points, and time-penalty matrices.
+
+2. **Competitive Bracketing & Division Formats**
+   - Multi-tier classification: Age/Skill brackets (e.g., Juniors, Open Elite, Masters, Wheelchair/Adapted Hopscotch variants).
+   - Tournament structural architecture: Double-elimination group stages leading into a single-elimination "Grand Pitch" playoff round.
+   - Tie-breaker protocols: The "Sudden Death Cascade" (increasingly complex custom court layouts).
+
+3. **Operations, Logistics, and Field-of-Play Management**
+   - Court-side official roles: Head Judge, Baseline Observers, Digital Line-Call Technicians, Scorekeeper, Timekeeper.
+   - Equipment and environmental requirements (indoor hardwood, outdoor asphalt, weather delay thresholds, chalk/tape adhesion guidelines).
+   - Medical, safety, and athlete recovery protocols (repetitive single-leg impact mitigation, warm-up mandates, joint-stress precautions).
+
+4. **Event Production, Broadcast & Engagement Engine**
+   - Run of Show (Minute-by-minute schedule for a single-day or multi-day championship).
+   - Spectator engagement features and broadcast package (slow-motion replay marker, "Chalk Cam," color-commentary lexicon, and audience callouts).
+   - Community-tier scaling guide: How to adapt this enterprise framework for local schools, community centers, or corporate team-building events without specialized tech.
+
+---
+
+### [CONTEXT]
+Hopscotch has historically been perceived as an informal playground game, but the GHI reimagines it as a high-stakes, legitimate athletic spectacle blending plyometric agility, micro-spatial awareness, aerodynamic marker-tossing accuracy, and mental endurance under clock pressure. 
+
+Assume the target audience for this document includes event directors, athletic sponsors, municipal park departments, competitive athletes, and sports broadcast producers. The framework must bridge the gap between playful accessibility and cutthroat athletic rigor. It must eliminate ambiguities that typically lead to playground disputes (e.g., chalk line touches, marker bounce outside borders, double-tapping the landing zone, heel lift).
+
+---
+
+### [EXPECTATION]
+Deliver the framework using the following formatting and quality benchmarks:
+
+- **Tone & Style:** Authoritative, encyclopedic, legally precise, yet dynamic and engaging (reminiscent of official Olympic or FIFA rulebooks merged with modern sports entertainment).
+- **Structure:** Use clean Markdown with clear headings, subheadings, bullet points, technical data tables (for court dimensions and scoring tables), and visual ASCII diagrams where court layouts and boundary zones are described.
+- **Completeness:** Do not use lazy placeholders (e.g., avoid "insert rules here" or "etc."). Provide fully fleshed-out metrics, exact measurements, penalty durations, and procedural sequences.
+- **Novelty:** Invent specialized terminology for key maneuvers (e.g., "The Straddle Pivot," "Fault Strike," "Chalk-Check," "Puck Drift").
+- **Edge-Case Preparedness:** Detail precise protocols for bizarre edge cases (e.g., marker breaking upon impact, external interference on the court, micro-shifts in line chalk mid-hop).
+```
+
+--- FRAMEWORK: RACE | SUBJECT: hopscotch competition ---
+Here is the comprehensive, highly optimized, and maximized **Super Prompt** engineered for immediate deployment.
+
+***
+
+```markdown
+# MISSION: DESIGN THE ULTIMATE COMPETITIVE HOPSCOTCH CHAMPIONSHIP (UHC)
+
+## [ROLE]
+You are a World-Class Extreme Sports Architect, Gamification Specialist, and International Rulebook Author (with the combined pedigree of a Red Bull event designer, an Olympic regulatory committee chair, and the creators of World Chase Tag). You specialize in transforming nostalgic, traditional playground games into high-intensity, commercially viable, spectator-friendly competitive sports with rigorous technical standards.
+
+## [CONTEXT]
+Hopscotch is historically viewed as an unstructured, casual street game. Your objective is to formalize, professionalize, and revolutionize hopscotch into an elite, internationally regulated athletic competition called the **"World Hopscotch Championship" (WHC)**. The event must appeal to athletes (combining plyometric power, balance, agility, and precision accuracy) and global audiences (high-stakes broadcast viewing, rapid pacing, and clear penalty markers). You must bridge the gap between pure athletic discipline, technical precision, and viral entertainment value.
+
+## [ACTION]
+Generate an exhaustive, fully realized, end-to-end Master Plan and Official Tournament Rulebook for this professional hopscotch competition. Structure your blueprint into the following six distinct modules:
+
+### 1. Brand Identity, Archetypes, and Athlete Profiles
+- Define the official championship name, tagline, and core competitive ethos.
+- Detail the physical profile/biometrics of the ideal competitor (e.g., gymnastics, parkour, track & field triple-jump crossovers).
+- Define the required standardized equipment: athlete footwear specifications, grip standards, and the standardized "Marker/Puck" (exact weight, diameter, friction coefficient, and material composition).
+
+### 2. Court Architecture & Technical Specifications
+- Define the standardized arena court: dimensions (metric and imperial), surface material (e.g., high-traction rubberized sports acrylic), and lighting conditions.
+- Produce an ASCII diagram or structured text layout of the official court configuration (e.g., a 10-grid or 12-grid modified progressive layout with specialized "neutral," "hazard," and "bonus" zones).
+- Detail integrated modern technology (e.g., high-speed sensor grids, pressure-plate boundaries, sub-millimeter laser line tracking, and VAR/Hawk-Eye equivalent for edge-strikes).
+
+### 3. The Unified Rulebook & Scoring Mechanics
+- **The Toss Phase:** Throw rules, landing validity, boundary allowances, time clocks (e.g., 5-second toss-clock).
+- **The Navigation Phase:** Permissible foot strikes (single-foot vs. straddle hops), pivot turn mechanics, marker retrieval posture/rules (e.g., retrieving from a single-leg balance without touching the boundary line).
+- **Comprehensive Foul Directory:** Categorize minor fouls, major fouls, and instant disqualifications (e.g., perimeter foot-touches, marker slide violations, double-hops, balance breaks).
+- **Scoring Algorithms:** Provide a scoring formula that balances **Time-to-Completion** (speed), **Execution Precision** (clean landings), and **Marker Accuracy** (distance of toss from center-ring target).
+
+### 4. Competitive Disciplines & Tournament Structure
+Design three distinct competitive formats for the championship:
+1. **Speed Hop (Sprint Duel):** Synchronous, head-to-head racing on mirrored courts.
+2. **Technical Mastery (Precision Gauntlet):** Progressive difficulty, shrinking grid boxes, moving targets, and asymmetrical terrain.
+3. **Freestyle / Dynamic Hopscotch:** Timed tricking, rotational flips, rhythmic constraints, and athletic expression.
+- Detail the bracket format (e.g., Double Elimination, 32-seed bracket, round-robin pool play) and match durations.
+
+### 5. Officiating, Adjudication & Tech Systems
+- Detail official roles: Lead Arena Referee, Line Judges, Tech/VAR Judge, and Floor Steward.
+- Outline the instant-replay protocol and challenge system (e.g., coach flags, time-loss penalties for unsuccessful appeals).
+
+### 6. Broadcast Design, Fan Engagement & Staging
+- Outline the viewer experience: camera angles (overhead spider-cam, low-profile floor rail cams, slow-mo ankle tracking).
+- Live on-screen telemetry/HUD (e.g., heart-rate monitors, ground-contact force in Gs, landing precision deltas).
+- Commercial strategy: spectator involvement, city-wide pop-up qualifying courses, and digital interactive apps.
+
+## [EXPECTATION]
+- **Depth & Tone:** Highly formal, authoritative, exhaustive, and precise. Treat this as a legally binding and operationally executable regulatory document.
+- **Completeness:** Do not use placeholders, vague generalities (e.g., do not say "define rules for fouls"—write the actual rules), or truncated lists.
+- **Formatting:** Use structured Markdown headers, bullet points, technical tables (where appropriate), and strict definitions.
+- **Clarity over Gimmick:** While the concept is unconventional, the execution must be ruthlessly professional, practical, and grounded in real-world physics, sports physiology, and event production standards.
+```
+
+--- FRAMEWORK: RACE | SUBJECT: hopscotch competition ---
+```markdown
+# SUPER PROMPT: THE ELITE COMPETITIVE HOPSCOTCH TOURNAMENT BLUEPRINT
+
+## [R] - ROLE
+You are the Chief Rules Arbiter, High-Performance Sports Systems Architect, and Director of Event Logistics for the World Kinetic Games Commission (WKGC). You possess world-class expertise in sports design, Olympic-level regulatory frameworks, biomechanical motion analysis, and broadcast-ready event production. Your mission is to treat sidewalk and playground games with the seriousness, precision, and tactical depth of premier professional sports (like competitive curling, gymnastics, and track & field).
+
+---
+
+## [A] - ACTION
+Generate an exhaustive, fully realized, professional-grade Master Rulebook and Operational Blueprint for a globally sanctioned, high-stakes **Competitive Hopscotch Championship** (titled: *"The Kinetic Apex Hopscotch Invitational"*). 
+
+Your document must design the sport from first principles, converting classic hopscotch into a high-octane, standardized athletic competition while retaining its nostalgic identity.
+
+To achieve this, execute the following specific sub-actions:
+1. **Court Architecture & Engineering:** Define millimeter-accurate court schematics, surface friction ratings, dimensions, line-width tolerances, and lighting/sensor specifications.
+2. **Standardized Equipment & Markers:** Define the exact physical specs for the marker/puck (called the "Toreador/Baton"), including material density, weight, diameter, coefficient of restitution, and allowed athlete customizations.
+3. **Official Rulebook & Biomechanical Regulations:** Establish comprehensive rules covering execution phases (Marker Placement, Approach, Propulsion, Transit, Pivot/Retrieval, Exit), timing limits (shot-clock style), and an exhaustive classification of Micro-Fouls, Foot-Faults, Balance Violations, and Disqualifications.
+4. **Scoring Engine & Metrics:** Develop a multi-tiered scoring matrix incorporating:
+   - *Base Completion Points*
+   - *Puck Proximity Vector Scoring* (accuracy of marker placement)
+   - *Pace of Transit Index* (time-trial bonuses)
+   - *Technical Difficulty Multipliers* (court variants)
+5. **Tournament Structure & Tiering:** Architect the bracket structure (Round-Robin qualifiers, Double-Elimination playoffs, and "Sudden-Death Pivot" finals) across multiple divisions (e.g., Sprint Hop, Endurance Multi-Court, Master's Technical).
+6. **Officiating & VAR Technology:** Outline the responsibilities of the Floor Marshall, Line Judges, and the High-Speed Optical Tracking / Video Assistant Referee (VAR) system.
+7. **Broadcast & Spectator Package:** Provide guidelines for sports commentary terminology, on-screen telemetry overlays (cadence, heart rate, foot-ground contact time), and live crowd engagement.
+
+---
+
+## [C] - CONTEXT
+- **Target Audience:** Professional event organizers, athletic commissions, broadcast networks, esports/sports crossover audiences, and elite athletes.
+- **Tone & Atmosphere:** Rigorous, authoritative, hyper-technical, yet thrilling and culturally captivating. Avoid condescension; treat hopscotch as a legitimate test of balance, plyometric explosive power, proprioception, and spatial control.
+- **Core Dilemma to Resolve:** Traditional hopscotch often leads to stalemates, subjective calls on line touches, or low spectator engagement. Your system MUST systematically solve these issues using precise definitions, strict time limits, sensor-assisted adjudication, and variable technical court designs.
+- **Environmental Variants:** Account for both controlled indoor sports-arena environments (hardwood/synthetic poly-court) and heritage outdoor settings (treated asphalt/concrete).
+
+---
+
+## [E] - EXPECTATION
+The generated blueprint must be presented in clear, publication-ready Markdown with structured numbering, tables, bullet points, and operational callouts.
+
+### Structural Deliverables Required:
+1. **SECTION 1: SANCTIONED COURT SCHEMATICS & MATERIAL SPECIFICATIONS**
+   - Exact measurements (meters and inches).
+   - Zone labels: 1 through 10, the "Rest Zones" (Doubles), and the "Crown/Semi-Circle Terminal".
+   - Line thickness rules (chalk vs. synthetic tape vs. embedded LED boundaries).
+2. **SECTION 2: THE "MARKER" SPECIFICATIONS (WKGC CLASS-A)**
+   - Weight (grams), diameter, shore hardness, dynamic friction criteria.
+3. **SECTION 3: THE OFFICIAL CODIFIED RULEBOOK**
+   - Step-by-step phase execution requirements.
+   - Shot-clock limits (e.g., 5 seconds to throw, 12 seconds to complete course).
+   - "The Zero-Tolerance Boundary Rule" (sub-millimeter line touch protocols).
+   - Table of Violations & Penalties (Minor, Major, Technical DQ).
+4. **SECTION 4: ADVANCED COMPETITIVE DISCIPLINES**
+   - *Discipline A: Classic Precision* (Elimination style, sequential box skips).
+   - *Discipline B: Velocity Hop* (Timed sprint run with required landing precision).
+   - *Discipline C: The Blind Pivot* (High-difficulty technical routines).
+5. **SECTION 5: TOURNAMENT FORMAT & MATCH LOGISTICS**
+   - Match duration, sets, frames, and tie-breaker mechanics ("The Golden Hop").
+   - Referee signals and VAR challenge protocol (coach challenges, reviewable calls).
+6. **SECTION 6: BROADCAST COMMENTARY GLOSSARY & ON-SCREEN TELEMETRY**
+   - Minimum 8 distinct jargon terms (e.g., "Toe-Bleed", "Apex Wobble", "Dead-Weight Drop").
+   - UI/UX specs for the viewer's on-screen heads-up display.
+
+Ensure maximum depth, granularity, and zero placeholder text. Produce a complete, standalone, ready-to-execute operational manual.
+```
+
