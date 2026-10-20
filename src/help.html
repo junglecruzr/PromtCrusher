@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Crusher Help</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+	.help-nav {
+	  margin-bottom: 2rem;
+	}
+
+	.help-nav a {
+	  color: #93c5fd;
+	  text-decoration: none;
+	  font-weight: 600;
+	}
+
+	.help-nav a:hover {
+	  text-decoration: underline;
+	}
+
+	.help-section {
+	  border-top: 1px solid var(--border);
+	  padding: 1.5rem 0;
+	}
+
+	.help-section:first-of-type {
+	  border-top: 0;
+	  padding-top: 0;
+	}
+
+	h2 {
+	  font-size: 1.25rem;
+	  margin-bottom: 0.75rem;
+	}
+
+	h3 {
+	  color: #bfdbfe;
+	  font-size: 1rem;
+	  margin: 1.25rem 0 0.5rem;
+	}
+
+	p,
+	li {
+	  color: #cbd5e1;
+	  line-height: 1.6;
+	}
+
+	ul,
+	ol {
+	  padding-left: 1.5rem;
+	  margin-top: 0.5rem;
+	}
+
+	.framework-card {
+	  background: rgba(255, 255, 255, 0.02);
+	  border: 1px solid var(--border);
+	  border-radius: 8px;
+	  padding: 1rem;
+	  margin-top: 0.75rem;
+	}
+
+	.framework-card strong {
+	  color: #f8fafc;
+	}
+
+	code {
+	  color: #bfdbfe;
+	  background: var(--bg-input);
+	  border-radius: 4px;
+	  padding: 0.1rem 0.3rem;
+	}
+  </style>
+</head>
+<body>
+  <main class="container">
+	<div class="help-nav"><a href="/">← Back to Prompt Crusher</a></div>
+	<h1>Prompt Crusher Help</h1>
+	<p class="subtitle">Choose a framework, describe your idea briefly, and generate a complete standalone Super Prompt.</p>
+
+	<section class="help-section">
+	  <h2>Basic workflow</h2>
+	  <ol>
+		<li>Choose the framework that best matches the type of result you want.</li>
+		<li>Enter a focused one- or two-sentence concept in the subject field. The subject is limited to 200 characters.</li>
+		<li>Select <strong>Generate Super Prompt</strong>. Gemini expands the concept using the selected framework.</li>
+		<li>Review the generated prompt and copy it for use in your target model or development workflow.</li>
+		<li>Optionally enter improvement instructions and select <strong>Enhance Super Prompt</strong>.</li>
+	  </ol>
+	  <p>The enhancement step preserves the original intent, applies your instructions, improves completeness, and checks the prompt against the selected framework.</p>
+	</section>
+
+	<section class="help-section">
+	  <h2>Available frameworks</h2>
+
+	  <div class="framework-card">
+		<strong>RACE — Role, Action, Context, Expectation</strong>
+		<p>General-purpose prompts for defining who the model is, what it should do, the relevant context, and the expected result.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>RISE — Role, Instructions/Issue, Steps, Expectation/Example</strong>
+		<p>Useful for guided tasks that need ordered instructions, examples, and a clearly defined outcome.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>STAR — Situation, Task, Action, Result</strong>
+		<p>Good for scenario-driven planning, case studies, professional responses, and outcome-focused tasks.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>SOAP — Subject, Objective, Action, Plan</strong>
+		<p>Structures a subject or problem into an objective, recommended action, and practical plan.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>APE — Action, Purpose, Expectation</strong>
+		<p>A compact framework for straightforward instructions where the action, reason, and expected result matter most.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>ERA — Expectation, Role, Action</strong>
+		<p>Starts with the desired result, establishes the model's role, and defines the work required to achieve it.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>BAB — Before, After, Bridge</strong>
+		<p>Useful for transformations, marketing concepts, improvement plans, and showing how to move from the current state to the desired state.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>TAG — Task, Action, Goal</strong>
+		<p>A simple task-oriented structure for converting a goal into clear actions and deliverables.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>RTF — Role, Task, Format</strong>
+		<p>Best for software, writing, research, and other prompts where expertise, assignment, and output format must be explicit.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>SOP — Schema, Operations, Proof</strong>
+		<p>Use for reliable JSON, XML, tables, and other structured outputs. It defines the schema, transformation rules, validation checks, examples, and invalid-input behavior.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>DEV — Discovery, Engineering, Verification</strong>
+		<p>Use for implementation-ready software prompts. It covers repository discovery, architecture, requirements, code changes, error handling, tests, edge cases, and acceptance criteria.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>AGT — Aim, Guardrails, Tools, Workflow</strong>
+		<p>Use for tool-using agents. It defines available tools, permissions, confirmation rules, budgets, stop conditions, error recovery, and evidence-based completion reports.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>RAG — Request, Authorities, Grounding</strong>
+		<p>Use for research and retrieval-augmented prompts. It establishes source quality, citation rules, evidence handling, uncertainty, conflicting sources, and protection against fabricated citations.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>STORY — Situation, Tension, Outline, Roles, Yield</strong>
+		<p>Use for narratives, screenplays, commercials, and scripts. It develops the premise, conflict, story beats, character arcs, dialogue, pacing, ending, and requested delivery format.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>RTF-3D — Interactive Three.js Extension</strong>
+		<p>Use for browser-based 3D applications and simulations. It adds scene architecture, simulation state, animation, camera controls, live metrics, project structure, performance requirements, and validation checks.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>IPB — Intent, Palette, Build, Materials, Typography, Boundaries</strong>
+		<p>Use for artistic image and poster prompts. It expands a theme into composition, color, visual hierarchy, materials, print texture, typography, references, and output constraints.</p>
+	  </div>
+
+	  <div class="framework-card">
+		<strong>VSB — Vision, Subjects, Blocks, Behavior, Boundaries</strong>
+		<p>Use for cinematic video and commercial prompts. It creates a visual treatment, locked subjects, timed scenes, shot directions, physical behavior, sound design, continuity rules, and negative prompts.</p>
+	  </div>
+	</section>
+
+	<section class="help-section">
+	  <h2>Enhancement workflow</h2>
+	  <p>The enhancement action runs after a prompt has been generated.</p>
+	  <ul>
+		<li>Leave the enhancement field empty to request a general polish and framework review.</li>
+		<li>Enter specific guidance to direct the revision, such as <code>add stronger validation</code>, <code>improve the shot timing</code>, or <code>make the implementation production-ready</code>.</li>
+		<li>The selected framework is sent with the existing prompt so the revision can check its structure.</li>
+		<li>The revised prompt replaces the displayed output and can be copied normally.</li>
+	  </ul>
+	</section>
+
+	<section class="help-section">
+	  <h2>Writing better subject inputs</h2>
+	  <ul>
+		<li>Name the main subject and desired result.</li>
+		<li>Include the target medium when it matters: video, poster, Three.js application, report, or code.</li>
+		<li>Include important constraints in the short concept, then use enhancement instructions for later refinement.</li>
+		<li>For framework-specific results, choose IPB for posters, VSB for video, and RTF-3D for interactive Three.js projects.</li>
+	  </ul>
+	</section>
+  </main>
+</body>
+</html>

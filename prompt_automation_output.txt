@@ -178,3 +178,285 @@ The generated blueprint must be presented in clear, publication-ready Markdown w
 Ensure maximum depth, granularity, and zero placeholder text. Produce a complete, standalone, ready-to-execute operational manual.
 ```
 
+--- FRAMEWORK: VSB | SUBJECT: A tabby cat in motorcyle clothing riding a chopper thru the country screaming meow as he rides by ---
+```markdown
+# VIDEO GENERATION MASTER SPECIFICATION (VSB FRAMEWORK)
+
+## 1. VISION
+*   **Project Title:** The Highway Stray
+*   **Creative Premise:** A cinematic, photorealistic live-action sequence depicting a rugged, weathered domestic mackerel tabby cat wearing bespoke miniature biker gear, commanding a custom-built, scale-proportioned chrome-and-steel chopper down a sun-drenched country road, unleashing a full-throated, guttural "MEOW" at high speed directly past the camera lens.
+*   **Total Duration:** 00:08:00 (8 seconds total runtime).
+*   **Visual Treatment & Realism Level:** 100% photorealistic practical-effects live-action aesthetic (reminiscent of high-budget anamorphic cinematography with practical animal training and seamless VFX integration). Tactile fur dynamics, authentic mechanical engine vibrations, and naturalistic physics. Zero stylized, cartoonish, or low-grade CGI aesthetics.
+*   **Lighting Strategy:** Naturalistic late golden-hour edge lighting. Low-angled, warm, directional sunlight casting long road shadows; intense lens flares kicking off chrome motorcycle accents; soft ambient fill on the cat's face from the asphalt bounce.
+*   **Film / Digital Emulation:** Shot on simulated ARRI Alexa 35 with Cooke Anamorphic/i Full Frame Plus SF lenses. Rich organic film grain, subtle horizontal lens streaking, shallow depth of field (T2.0), smooth micro-contrast, and realistic rolling shutter motion blur on the road and wheel spokes.
+*   **Pacing & Tone:** High-energy, visceral, deadpan Americana grit meets absurd physical realism. Accelerating kinetic tracking movement paired with intense sound design.
+
+---
+
+## 2. SUBJECTS & ASSETS
+
+### Character: "The Biker Tabby"
+*   **Identity & Anatomy:** Mature, muscular male domestic mackerel tabby cat (Felis catus). Classic dark charcoal/brown tiger striping over warm sandy-tan base coat; white muzzle, chest patch, and chin. Piercing, intense gooseberry-green eyes with narrow, focused pupils. Anatomically authentic feline proportions—body seated low in a custom saddle, hind paws positioned on micro-footpegs, forepaws gripping the handlebars.
+*   **Wardrobe:** 
+    *   *Jacket:* Heavyweight, distressed black leather biker cut/vest with aged silver metal snaps, authentic micro-stitching, and subtle road wear. Back of vest features a non-branded, embroidered white patch depicting a crossed-fishbones-and-skull motif.
+    *   *Eyewear:* Vintage miniature aviator-style goggles with brass rims, slightly scuffed acrylic lenses, strapped securely around the head behind flattened, wind-blown ears.
+    *   *Accessories:* Distressed red paisley bandana knotted snugly around the neck, tail whipped behind in the draft, tiny studded leather gauntlets on front paws allowing claws to hook securely onto rubber grip handles.
+*   **Continuity & Identity Lock:** The cat’s facial striping, ear notch on the left ear, and fur coloring remain 100% consistent across all frame transitions. The vest, goggles, and bike scale must remain locked to a 1:3 real-world physical scale relative to the cat.
+
+### Vehicle: "The Mini-Chopper"
+*   **Build & Specs:** Custom scale hardtail chopper motorcycle sized precisely for feline anatomy. High-gloss black teardrop fuel tank; polished chrome raked-out front springer forks; miniature ape-hanger handlebars; exposed running belt; miniature V-twin engine with finned cylinder heads vibrating organically; dual straight-pipe upswept exhaust pipes emitting heat distortion and micro-puffs of faint blue-grey exhaust.
+*   **Details:** Chrome spoke wheels with black rubber road tires kicking up tiny roadside dust particles; small vintage yellow-tinted glass headlight mounted low; no copyrighted emblems, logos, or commercial text.
+
+### Environment & Location
+*   **Setting:** Remote two-lane rural blacktop road winding through rolling, dry golden wheat fields and pastureland in the American West.
+*   **Environmental Elements:** Cracked, heat-stressed dark asphalt with weathered, faded double yellow center lines. Weather-beaten split-rail cedar fences running parallel to the shoulder. Occasional vintage telephone poles, telephone wires, and wild roadside sunflowers blurring in the background.
+
+---
+
+## 3. BLOCKS (TIMED SHOT BREAKDOWN)
+
+### Block 1: The Approach & Roar (00:00:00 - 00:03:50)
+*   **Shot Size / Framing:** Low-angle tracking shot, Medium-Close framing. 
+*   **Camera Movement:** Hard-mount chase vehicle or Russian arm camera tracking backwards at matching vehicle speed (approx. 45 mph equivalent), descending smoothly from eye level to ground level (6 inches above asphalt).
+*   **Action:** The chopper blasts along the road center line. The cat hunches forward over the tank, wind violently parting its whiskers and ear tufts. At 00:01:75, the cat turns its head slightly toward the lens, bares its sharp fangs, wrinkles its pink nose realistically, and lets out a wide-mouthed, aggressive, full-lunged "MEOW" scream. Saliva flecks catch the late-day sun.
+*   **Transition:** Match-cut on motion, sweeping into a dynamic side-parallel angle.
+
+### Block 2: Parallel Profile & G-Force (00:03:50 - 00:06:00)
+*   **Shot Size / Framing:** Extreme Low-Angle Profile, Close-Up.
+*   **Camera Movement:** Tracking parallel to the bike on the road shoulder, panning smoothly with rapid parallex of passing fence posts and wheat stalks in the background.
+*   **Action:** Focus on the mechanical and physical details: the vibration of the cat’s paws on the throttle grip, the red bandana whipping frantically behind its neck, the chrome exhaust pipe glowing faintly gold from engine heat. The cat maintains laser-focused highway discipline, eyes locked forward through the wind-flattened fur, continuing the trailing end of its guttural meow.
+*   **Transition:** Fast whip-pan left-to-right as the motorcycle surges forward ahead of the camera.
+
+### Block 3: The Drive-By & Flyout (00:06:00 - 00:08:00)
+*   **Shot Size / Framing:** Wide-Angle Ground-Level Static to Rapid Pan (Doppler Pass).
+*   **Camera Movement:** Camera sits stationary 3 inches above the tarmac edge; quick 180-degree whip-pan as the chopper blows past the lens into the deep background.
+*   **Action:** The chopper blasts past the camera within inches, violently shaking the camera frame (lens shake effect) and rustling roadside dry grass. The cat accelerates into the distance, taillight glowing ruby-red against the asphalt as the chopper leans gracefully into a soft rightward curve toward the setting sun.
+*   **Transition:** Hard cut to black at exactly 00:08:00.
+
+---
+
+## 4. BEHAVIOR & PHYSICAL INTERACTIONS
+
+*   **Feline & Mechanical Physicality:** 
+    *   No humanoid movement. The cat’s grip on the bars is natural—weight distributed back onto its haunches, core braced against the acceleration G-forces.
+    *   Dynamic aerodynamic effects: Whiskers pinned back against the cheeks by wind; ear tips rippling under aerodynamic drag; belly fur vibrating with the rhythmic thump of the scale V-twin engine.
+    *   Mouth articulation during the "MEOW": The jaw must drop realistically, pulling the lips back to reveal wet pink gums, prominent white upper and lower canines, and a raised, quivering tongue. The eyes narrow slightly in organic muscular response during vocalization.
+*   **Lighting, Shadows & Reflections:** 
+    *   Dynamic ray-traced reflections of passing roadside telephone poles and the amber sky visible in the chrome mirror, headlight housing, and the curved surface of the cat's aviator goggle lenses.
+    *   Crisp, high-contrast, fast-moving vehicle shadow cast onto the textured road surface at a 45-degree angle.
+*   **Audio / Sound Design Integration (For Generative Audio Pipelines):**
+    *   *00:00:00 - 00:01:75:* High-revving, aggressive, rumbling four-stroke miniature chopper engine tone (throaty potato-potato idle exploding into high-RPM roar), combined with heavy rushing wind noise.
+    *   *00:01:75 - 00:05:00:* The roar of the engine dips slightly under a comically fierce, full-throated, resonant, uncompressed feline vocalization—a blend of an authentic loud housecat screech and a feral wildcat yowling scream, echoing through the landscape with spatial distance decay.
+    *   *00:06:00 - 00:08:00:* Pronounced Doppler effect drop in engine and exhaust pitch as the bike screams past the microphone, finishing with gravel scatter and fading deep low-end exhaust rumble.
+
+---
+
+## 5. BOUNDARIES & NEGATIVE CONSTRAINTS
+
+*   **Prohibited Visual Elements & Artifacts:**
+    *   NO cartoonish, anthropomorphic, or stylized features (e.g., human-shaped hands, fingers, human posture, upright two-legged riding, or exaggerated Disney/Pixar eyes).
+    *   NO floating artifacts, morphing tire rims, non-spinning spokes, or rubbery shifting road lines.
+    *   NO brand trademarks, commercial logos (e.g., Harley-Davidson, Indian, Bell, Ray-Ban), or visible script text anywhere on the bike or clothing.
+    *   NO static or painted fur; every hair must react physically to wind speed and mechanical engine resonance.
+    *   NO unrealistic green-screen haloing, edge bleeding, or unmotivated lighting variations across shot boundaries.
+*   **Model Failure Mode Checks:**
+    *   *Paws on Handlebars:* Explicit check to ensure the forepaws maintain a continuous, physically grounded connection to the motorcycle grips; no phase-shifting through the geometry.
+    *   *Vocalization Mechanics:* Prevent the model from morphing the cat's head into a human/dog shape when the mouth opens wide to scream. Jaw hinges strictly according to feline skeletal anatomy.
+    *   *Vehicle Grounding:* Prevent the motorcycle from floating above the road plane; tires must compress subtly against the asphalt texture with realistic contact patches and road dust interaction.
+
+---
+
+## 6. PRODUCTION VALIDATION CHECKLIST
+- [x] **Timing Check:** Block 1 (3.5s) + Block 2 (2.5s) + Block 3 (2.0s) = Exactly 00:08:00 total runtime.
+- [x] **Subject Identity:** Single mackerel tabby cat with documented coat markers, locked scale, and consistent distressed biker wardrobe maintained across all cuts.
+- [x] **Vehicle Continuity:** Bespoke scale chrome hardtail chopper consistent across camera perspectives without morphing mechanical components.
+- [x] **Lighting & World State:** Constant late-afternoon golden-hour sun vector, shadow angle, and atmospheric conditions across all three shot blocks.
+- [x] **Safety & Brand Exclusions:** Zero copyrighted branding, zero anthropomorphic anatomy, fully compliant negative restrictions.
+```
+
+--- FRAMEWORK: RTF-3D | SUBJECT: A harry potter styled newspaper, with the major headline 'New Prompt Machine' ---
+```markdown
+# SYSTEM PROMPT: Interactive 3D Magical Newspaper ("The Daily Prompt")
+
+You are an elite Creative Technologist, Three.js Specialist, and WebGL Systems Architect. Your task is to develop a complete, fully functional, production-ready, interactive 3D web experience replicating a magical newspaper in the style of the *Daily Prophet*, featuring dynamic moving photographs, enchanted typography, and an interactive lead article with the headline: **"NEW PROMPT MACHINE"**.
+
+Deliver the complete source code as a **single, standalone HTML file** containing all HTML, CSS, procedural textures, shaders, and JavaScript (ES Modules via CDN).
+
+---
+
+## 1. ROLE
+You are a Principal 3D Web Graphics Engineer and Creative Developer specializing in:
+- High-performance Three.js applications, custom GLSL shaders, and procedural texture generation.
+- Interactive physical simulation (page curling, dynamic lighting, subtle physics).
+- Procedural animation, 2D Canvas-to-WebGL dynamic texture mapping, and Web Audio API synthesis.
+- Production-grade code structure, resource lifecycle management, responsive design, and 60 FPS mobile/desktop optimization.
+
+---
+
+## 2. TASK & DOMAIN SPECIFICATION
+Create an interactive, physically plausible 3D magical newspaper titled *"The Daily Prophet & Herald"* lying on an antique wooden desk. The front-page spotlight article features a live, moving, monochrome moving picture illustrating the **"New Prompt Machine"**—a brass-and-aether clockwork apparatus that cranks out glowing scrolls of synthetic thought.
+
+### Key Domain Entities & Workflow:
+1. **The Newspaper Entity (`MagicalNewspaper`)**: Multi-layered mesh with realistic thickness, procedural creasing, dog-eared edges, and dynamic multi-page flipping/peeking mechanics.
+2. **The Moving Picture (`LivingPhotoCanvas`)**: An offscreen HTML5 2D canvas rendering an animated black-and-white, vintage-graded moving scene of an arcane mechanical prompt synthesizer, continuously projected onto the paper's front mesh.
+3. **The Dynamic Ink & Headline Engine (`InkTypographyEngine`)**: Procedural headlines, moving ink particles, jittering subtitles, and real-time reactive text that subtly rearranges or shimmers when examined.
+4. **Environment (`AntiqueDeskEnvironment`)**: Dark, atmospheric study with candlelight, floating dust motes, and a mahogany work surface.
+5. **State Machine (`PaperState`)**:
+   - `RESTING`: Paper lays flat on the desk, slight idle breathing animation of pages.
+   - `INSPECT_HEADLINE`: Camera glides into an extreme close-up of the "New Prompt Machine" moving image and article text.
+   - `PAGE_PEEK / FLIP`: The top-right corner curls up realistically upon mouse hover or touch drag.
+   - `PROMPT_EDIT`: An interface allowing the user to inject a new headline prompt, triggering dynamic magical ink reconfiguration.
+
+---
+
+## 3. SCENE & VISUAL HIERARCHY
+
+### Environment & Coordinates
+- **Origin `(0, 0, 0)`**: Center of the main front-page surface.
+- **Desk Surface**: Plane at `y = -0.05` spanning `20x20` units with procedural dark mahogany wood grain generated via canvas (specular roughness map, subtle varnish reflection).
+- **Coordinate System**: Right-handed Y-up. Newspaper dimensions: `Width = 4.2`, `Height = 6.0`, `Thickness = 0.04`.
+
+### Camera & Viewports
+- **Default View**: `Position: (0, 4.8, 4.2)`, `Target: (0, 0, 0.2)`, FOV 45°.
+- **Inspect Headline View**: `Position: (-0.6, 2.2, 1.2)`, `Target: (-0.6, 0.02, 0.4)`, FOV 32°.
+- Smooth transitions governed by cubic bezier or damped spring interpolation (Lerp / Slerp via `Vector3.lerp`).
+
+### Lighting & Atmosphere
+- **Candle Key Light**: `PointLight` at `(-2.5, 1.8, 1.5)`, warm amber color (`#ffaa44`), intensity `2.2`, distance `8.0`, with subtle high-frequency Perlin/sinusoidal flicker simulation.
+- **Ambient Fill**: `AmbientLight` at cold blue-gray (`#1a2030`), intensity `0.45` to maintain cinematic contrast.
+- **Rim Light**: `DirectionalLight` at `(4.0, 5.0, -3.0)`, cool silver-white (`#d0e0ff`), intensity `0.8` for edge definition on paper bevels.
+- **Atmospheric Particles**: 150 procedural floating dust specks/sparks drifting lazily using `Points` and an additive blend shader.
+
+### Materials & Procedural Textures (No External Asset Dependencies)
+1. **Parchment Material (`MeshStandardMaterial`)**:
+   - Procedural diffuse texture synthesized via an offscreen 2048x2048 HTML Canvas: aged yellowed parchment (`#e8dcbe` to `#c4b187`), coffee ring stains, fiber imperfections, ragged vignetted edges.
+   - Bump/Roughness maps generated directly from parchment canvas grayscale luminance values.
+2. **Moving Picture Material (`MeshStandardMaterial`)**:
+   - Sourced via a dynamic `CanvasTexture` updated every frame.
+   - Emissive map with a faint supernatural cyan-gold pulse (`#102530`).
+   - Custom vignette and film grain post-processing layered directly onto the 2D offscreen canvas.
+
+---
+
+## 4. SIMULATION & STATE MODEL
+
+### The "Prompt Machine" Micro-Simulation (Inside the Moving Picture)
+The 2D dynamic canvas (512x512) renders an animated scene representing the **"New Prompt Machine"**:
+- **Clockwork Gears**: 3 intermeshed rotating brass gears, drawn with stroke paths, rotating inversely.
+- **Typewriter / Aether Carriage**: A mechanical armature that oscillates back and forth across an illuminated arcane chamber.
+- **Ink & Rune Exhaust**: Small glowing glyphs or alphabet characters (`λ`, `§`, `0`, `1`, `A`, `Z`, `?`, `*`) that float upward from the machine and dissolve into smoke.
+- **Vintage Post-Filter**: Scanlines, jittered contrast, procedural sepia tinting, and intermittent frame drop (12–15 FPS aesthetic inside the 60 FPS 3D canvas).
+
+### Paper Physical States & Transitions
+```
++-------------+      Hover Corner       +----------------+
+|             | ----------------------> |                |
+|   RESTING   |                         |   PAGE_PEEK    |
+|             | <---------------------- | (Corner Curls) |
++-------------+      Pointer Leave      +----------------+
+       |                                        |
+       | Click Headline                         | Drag Release
+       v                                        v
++--------------------+                 +-----------------+
+|  INSPECT_HEADLINE  |                 | PAGE_TURN_ANIM  |
+|  (Macro Camera +   |                 +-----------------+
+|   Active Machine)  |
++--------------------+
+```
+
+---
+
+## 5. ANIMATION ARCHITECTURE
+
+1. **Procedural Page Curl Engine**:
+   - Construct the front newspaper page using a `PlaneGeometry` with high segment density (`64x64`).
+   - Deform vertices in the vertex shader or CPU update loop using a cylindrical page-curl formula:
+     $$y' = y + \sin(\text{dist} \cdot \text{frequency}) \cdot \text{curlAmount}$$
+   - Bound deformations strictly to corner zones to prevent mesh distortion.
+2. **Flickering Illumination**:
+   - Update `PointLight.intensity` using compound sine waves + pseudo-random noise:
+     `light.intensity = baseIntensity + sin(t * 12.0) * 0.08 + sin(t * 27.0) * 0.04 + (Math.random() - 0.5) * 0.05`
+3. **Floating Dust Motes**:
+   - `Points` system with simple Euler displacement and boundary wrapping within a bounding box `[-3, 3]` across X, Y, Z.
+4. **Headline Ink Shimmer**:
+   - Animate the dynamic text on the parchment canvas by applying subtle sinusoidal letter kerning or drawing faint "breathing" ink shadows around the words **"NEW PROMPT MACHINE"**.
+
+---
+
+## 6. INTERACTION & UI SYSTEMS
+
+### Controls & Navigation
+- **Orbit Inspection**: Constrained `OrbitControls` (Polar angle clamp: `15°` to `75°`, Azimuth clamp: `-45°` to `45°`, Min Distance: `1.8`, Max Distance: `6.5`).
+- **Interactive Raycaster**:
+  - Detects hover over the moving picture, articles, and interactive corner tabs.
+  - Changes cursor to vintage ornate pointer (`pointer` CSS).
+- **HUD & Overlay Controls**:
+  - Minimalistic, thematic brass/parchment glassmorphism overlay.
+  - Buttons: **"Inspect Machine"**, **"Reset View"**, **"Generate New Edition"** (cycles the generated prompt headline).
+  - An inline text field: **"Feed the Prompt Machine"** (updates headline and causes the machine animation to spark vigorously).
+
+### Audio Synthesis (Web Audio API - Pure Code)
+- Synthesize an optional subtle parchment rustle when curling pages (filtered white noise burst through a bandpass filter).
+- Synthesize an arcane mechanical tick for the moving prompt machine (short pitch-decayed square wave pulses).
+
+---
+
+## 7. IMPLEMENTATION SPECIFICATION
+
+The response must be a single, copy-pasteable, error-free HTML file.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Daily Prophet - New Prompt Machine</title>
+  <style>
+    /* CSS Reset, Fullscreen canvas, Thematic typography, HUD styling */
+  </style>
+  <!-- Three.js and OrbitControls via CDN Import Map or ES Modules -->
+</head>
+<body>
+  <div id="canvas-container"></div>
+  <div id="ui-overlay">
+    <!-- Thematic controls, headline inputs, status badges -->
+  </div>
+  <script type="module">
+    // Complete code architecture:
+    // 1. Textures & Canvas Generator (Newspaper front page, Wood desk)
+    // 2. LivingPhotoCanvas Subsystem (The moving Prompt Machine animation loop)
+    // 3. Three.js Scene Setup (Renderer, Camera, Lights, Shadow maps)
+    // 4. Newspaper Mesh Creation (Curled geometry, physical materials)
+    // 5. Particle System (Dust motes)
+    // 6. Interaction Management (Raycaster, Orbit controls, Click events)
+    // 7. Dynamic UI Listeners
+    // 8. Render & Animation Loop
+  </script>
+</body>
+</html>
+```
+
+### Detailed Structural Guidelines:
+- **No external image or 3D asset files**: All graphics (aged paper textures, masthead, wood grain, machine artwork) must be generated procedurally via pure HTML5 Canvas 2D / WebGL APIs.
+- **Memory & Resource Management**: Clean texture disposal, proper canvas resolution scaling (`window.devicePixelRatio <= 2`), and cancellation of `requestAnimationFrame` on page hide/visibility change.
+- **Robust Error Handling**: Check for WebGL 2 support, handle window resizing seamlessly with aspect ratio updates.
+
+---
+
+## 8. PERFORMANCE & VALIDATION CHECKLIST
+
+### Performance Requirements:
+- [ ] Maintains stable 60 FPS on mid-tier desktop and mobile devices.
+- [ ] Offscreen canvas for the moving picture updates at a calibrated 15-20 FPS internal tick to emulate antique magical cinema while Three.js renders at a silky 60 FPS.
+- [ ] Single composite draw call for the newspaper mesh; lightweight shaders for dust.
+
+### Acceptance Criteria:
+1. **Visual Fidelity**: Does it immediately convey the enchanted newspaper style from the wizarding world? Is the masthead ornate, vintage, and aged?
+2. **Thematic Core**: Is the **"NEW PROMPT MACHINE"** headline instantly prominent, flanked by columns of animated or arcane Latin/English typography?
+3. **Interactive Moving Photo**: Does clicking the headline zoom the camera into the moving picture of the Prompt Machine? Does the machine show rotating gears and rising prompt runes?
+4. **Robustness**: Does resizing the browser window work without distortion or clipping? Are there zero console errors on startup?
+
+Execute this entire specification now and output the complete, executable single-file application.
+```
+

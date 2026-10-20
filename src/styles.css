@@ -47,10 +47,42 @@ h1 {
   gap: 0.75rem;
 }
 
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.help-link {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.help-link:hover {
+  text-decoration: underline;
+}
+
 .subtitle {
   color: var(--text-muted);
   font-size: 1rem;
   margin-bottom: 2.5rem;
+}
+
+.help-nav {
+  margin-bottom: 1.5rem;
+}
+
+.help-nav a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.help-nav a:hover {
+  text-decoration: underline;
 }
 
 .key-panel {
@@ -93,7 +125,8 @@ label {
 
 select,
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+textarea {
   width: 100%;
   background: var(--bg-input);
   border: 1px solid var(--border);
@@ -102,11 +135,13 @@ input[type="password"] {
   border-radius: 8px;
   font-size: 0.95rem;
   outline: none;
+  resize: vertical;
 }
 
 select:focus,
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+textarea:focus {
   border-color: var(--border-focus);
 }
 

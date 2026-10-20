@@ -8,10 +8,14 @@ class UILauncher:
     def launch(self, url: str) -> None:
         try:
             if sys.platform == "win32":
-                subprocess.Popen(
-                    ["cmd.exe", "/c", f"start chrome --app={url} || start msedge --app={url}"],
-                    creationflags=subprocess.CREATE_NO_WINDOW,
-                )
+                browser = shutil.which("chrome") or shutil.which("msedge")
+                if browser:
+                    subprocess.Popen(
+                        [browser, f"--app={url}"],
+                        creationflags=subprocess.CREATE_NO_WINDOW,
+                    )
+                else:
+                    webbrowser.open(url)
             elif sys.platform.startswith("linux"):
                 for browser in ("google-chrome", "google-chrome-stable", "chromium", "chromium-browser"):
                     browser_path = shutil.which(browser)

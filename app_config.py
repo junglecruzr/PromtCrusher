@@ -33,14 +33,14 @@ class AppConfig:
         candidates = []
         for base in (self.exe_dir, self.internal_dir, self.exe_dir / "src", self.internal_dir / "src"):
             env_path = base / ".env"
-            if env_path.exists():
+            if env_path.exists() and env_path not in candidates:
                 candidates.append(env_path)
 
         for env_path in candidates:
             if load_dotenv is not None:
                 load_dotenv(dotenv_path=env_path, override=True)
-            key = os.getenv("GOOGLE_API_KEY")
-            if key:
-                return key
+            key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
+            if key and key.strip():
+                return key.strip()
 
-        return os.getenv("GOOGLE_API_KEY", "")
+        return (os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY") or "").strip()

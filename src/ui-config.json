@@ -10,8 +10,8 @@
   },
   "ui_strings": {
     "title_heading": "💥 Prompt Crusher Pro",
-    "subtitle_description": "Select your architecture framework and feed subjects to generate optimized standalone Super Prompts.",
-    "input_placeholder": "e.g., marketing archetypes, python code refactoring",
+    "subtitle_description": "Select an architecture framework and turn a short idea into an optimized standalone prompt for structured data, software, agents, research, stories, posters, video, and interactive 3D.",
+    "input_placeholder": "e.g., build a research-backed launch plan with cited sources and measurable steps",
     "btn_text_idle": "Generate Super Prompt",
     "btn_text_loading": "Crushing Prompt Matrix... Please Wait..."
   }

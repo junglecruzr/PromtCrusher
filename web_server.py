@@ -50,6 +50,9 @@ class PromptRequestHandler(BaseHTTPRequestHandler):
         elif path == "ui-config.json":
             file_to_serve = src_dir / "ui-config.json"
             content_type = "application/json"
+        elif path == "help.html":
+            file_to_serve = src_dir / "help.html"
+            content_type = "text/html"
         elif path == "check-key":
             self._send_json(self.app_server.service.key_status())
             return
@@ -94,13 +97,38 @@ class PromptRequestHandler(BaseHTTPRequestHandler):
             new_key = data.get("key", "").strip()
             if not new_key:
                 self._send_json(
-                    {"status": "error", "message": "⚠️ Input Error: Please paste a valid token string first."},
+                    {"status": "error", "message": "⚠️ Input Error: Please paste a Gemini API key first."},
                     status=400,
                 )
                 return
 
-            service.save_api_key(new_key)
+            try:
+                service.save_api_key(new_key)
+            except ValueError as exc:
+                self._send_json({"status": "error", "message": f"⚠️ Input Error: {exc}"}, status=400)
+                return
             self._send_json({"status": "success"})
+            return
+
+        if path == "enhance":
+            data = json.loads(post_data.decode("utf-8"))
+            existing_prompt = data.get("prompt", "")
+            framework = data.get("framework", "RACE")
+            enhancement_request = data.get("instructions", "")
+            if not isinstance(existing_prompt, str) or not existing_prompt.strip():
+                self._send_json(
+                    {"status": "error", "message": "⚠️ Input Error: Generate a Super Prompt before enhancing it."},
+                    status=400,
+                )
+                return
+            if not isinstance(enhancement_request, str):
+                enhancement_request = ""
+
+            try:
+                result = service.enhance(existing_prompt, framework, enhancement_request)
+                self._send_json({"status": "success", "prompt": result})
+            except Exception as exc:
+                self._send_json({"status": "error", "message": service.error_message(exc)})
             return
 
         data = json.loads(post_data.decode("utf-8"))

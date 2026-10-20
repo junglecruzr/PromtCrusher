@@ -39,7 +39,7 @@ def main() -> None:
     if not service.api_key:
         show_message_box(
             "PromptCrusher - Configuration Warning",
-            "No GOOGLE_API_KEY was found. The local UI will start and let you apply a token from the dashboard.",
+            "No GOOGLE_API_KEY was found. The local UI will start and let you apply a Gemini API key from the dashboard.",
             0x40,
         )
 

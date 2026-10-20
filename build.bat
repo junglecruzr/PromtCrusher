@@ -7,7 +7,7 @@ echo IMPORTANT: This is a temporary evaluation build.
  echo The API key is only for the pilot evaluation window and should be replaced later by each user.
 
 if not defined GOOGLE_API_KEY (
-    echo Enter the temporary evaluation Gemini API key when prompted.
+    echo Enter the temporary evaluation Gemini API key from Google AI Studio when prompted.
     set /p "GOOGLE_API_KEY=GOOGLE_API_KEY="
 )
 
@@ -25,4 +25,3 @@ set GOOGLE_API_KEY=
 
 echo ✨ Evaluation Build Finalized Successfully!
 endlocal
-pause

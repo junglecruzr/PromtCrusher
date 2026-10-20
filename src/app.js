@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const outputContainer = document.getElementById('output-container');
   const outputDisplay = document.getElementById('output-display');
   const copyBtn = document.getElementById('copy-btn');
+  const enhanceBtn = document.getElementById('enhance-btn');
+  const enhancementInput = document.getElementById('enhancement-input');
   const apiKeyInput = document.getElementById('api-key-input');
   const saveKeyBtn = document.getElementById('save-key-btn');
   const keyStatusMsg = document.getElementById('key-status-msg');
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   saveKeyBtn.addEventListener('click', async () => {
     const customKey = apiKeyInput.value.trim();
     if (!customKey) {
-      return alert('⚠️ Input Error: Please paste a valid token string first.');
+       return alert('⚠️ Input Error: Please paste a Gemini API key from Google AI Studio.');
     }
 
     try {
@@ -55,8 +57,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
 
       if (response.ok) {
-        alert('✨ Success: Custom .env profile configuration generated automatically!');
+        alert('✨ Success: Custom Gemini API key configuration saved locally.');
         window.location.reload();
+      } else {
+        const data = await response.json().catch(() => ({}));
+        alert(data.message || '❌ The Gemini API key was rejected.');
       }
     } catch (err) {
       alert('❌ Profile Generation Failure.');
@@ -103,6 +108,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     } finally {
       generateBtn.disabled = false;
       generateBtn.textContent = originalBtnText;
+    }
+  });
+
+  enhanceBtn.addEventListener('click', async () => {
+    const existingPrompt = outputDisplay.textContent.trim();
+    if (!existingPrompt) {
+      return alert('⚠️ Generate a Super Prompt before enhancing it.');
+    }
+
+    enhanceBtn.disabled = true;
+    const originalBtnText = enhanceBtn.textContent;
+    enhanceBtn.textContent = 'Enhancing Super Prompt...';
+
+    try {
+      const response = await fetch(`${BASE_URL}/enhance`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          prompt: existingPrompt,
+          framework: frameworkSelect.value,
+          instructions: enhancementInput.value.trim()
+        })
+      });
+
+      const data = await response.json();
+      if (data.status === 'success') {
+        outputDisplay.textContent = data.prompt;
+        outputContainer.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        alert(data.message || '❌ Enhancement failed.');
+      }
+    } catch (error) {
+      alert('❌ Server Connection Error.');
+    } finally {
+      enhanceBtn.disabled = false;
+      enhanceBtn.textContent = originalBtnText;
     }
   });
 

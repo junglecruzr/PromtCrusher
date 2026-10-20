@@ -8,15 +8,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>💥 Prompt Crusher Pro</h1>
+    <div class="header-row">
+      <h1>💥 Prompt Crusher Pro</h1>
+      <a class="help-link" href="/help.html">Help</a>
+    </div>
     <p class="subtitle">Select your architecture framework and feed subjects to generate optimized standalone Super Prompts.</p>
 
     <div class="key-panel">
       <label>Custom API Key Override (Optional)</label>
-      <p class="helper-text">Paste your personal Gemini token below to automatically generate a local profile configuration.</p>
+       <p class="helper-text">Paste a Gemini API key from Google AI Studio. OAuth access tokens are not supported.</p>
       <div class="key-row">
-        <input type="password" id="api-key-input" placeholder="AIzaSy...">
-        <button class="btn" id="save-key-btn">Apply Token</button>
+        <input type="password" id="api-key-input" placeholder="Paste your Google AI Studio API key">
+        <button class="btn" id="save-key-btn">Apply API Key</button>
       </div>
       <div id="key-status-msg" class="status-message" aria-live="polite"></div>
     </div>
@@ -34,6 +37,14 @@
           <option value="BAB">BAB (Before, After, Bridge)</option>
           <option value="TAG">TAG (Task, Action, Goal)</option>
           <option value="RTF">RTF (Role, Task, Format)</option>
+          <option value="SOP">SOP (Schema, Operations, Proof)</option>
+          <option value="DEV">DEV (Discovery, Engineering, Verification)</option>
+          <option value="AGT">AGT (Aim, Guardrails, Tools, Workflow)</option>
+          <option value="RAG">RAG (Request, Authorities, Grounding)</option>
+          <option value="STORY">STORY (Situation, Tension, Outline, Roles, Yield)</option>
+          <option value="RTF-3D">RTF-3D (Interactive Three.js Extension)</option>
+          <option value="IPB">IPB (Intent, Palette, Build, Materials, Typography, Boundaries)</option>
+          <option value="VSB">VSB (Vision, Subjects, Blocks, Behavior, Boundaries)</option>
         </select>
       </div>
 
@@ -51,6 +62,11 @@
         <button class="btn btn-small" id="copy-btn">Copy Prompt</button>
       </div>
       <pre id="output-display"></pre>
+      <div class="enhancement-panel">
+        <label for="enhancement-input">Optional Enhancement Instructions</label>
+        <textarea id="enhancement-input" rows="3" placeholder="e.g., add stronger validation, improve the shot timing, or make the implementation more production-ready"></textarea>
+        <button class="btn" id="enhance-btn">Enhance Super Prompt</button>
+      </div>
     </div>
   </div>
 

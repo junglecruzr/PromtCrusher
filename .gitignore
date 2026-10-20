@@ -1,0 +1,18 @@
+# Visual Studio and IDE state
+.vs/
+.idea/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Local credentials
+.env
+
+# Runtime-generated application output
+prompt_automation_output.txt
+
+# Build artifacts
+build/
+dist/
+*.spec
