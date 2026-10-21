@@ -1,4 +1,8 @@
 import os
+import json
+from urllib.error import HTTPError
+from urllib.parse import urlparse
+from urllib.request import Request, urlopen
 
 from app_config import AppConfig
 from workflows.models import ProjectBlueprint, WorkflowTask
@@ -130,54 +134,120 @@ Requirements:
 [EXISTING SUPER PROMPT]
 {existing_prompt}"""
 
+OPENAI_COMPATIBLE_PROVIDERS = {
+    "openai", "openrouter", "groq", "mistral", "deepseek", "xai", "ollama", "lmstudio", "openai-compatible"
+}
+LOCAL_PROVIDERS = {"ollama", "lmstudio"}
+
 
 class PromptService:
     def __init__(self, config: AppConfig) -> None:
         self.config = config
-        self.api_key = config.resolve_api_key()
-        if genai is None:
+        settings = config.resolve_provider_settings()
+        self.provider = settings["provider"]
+        self.protocol = settings["protocol"]
+        self.api_key = settings["api_key"]
+        self.base_url = settings["base_url"]
+        self.model = settings["model"]
+        if self.protocol == "gemini" and genai is None:
             raise RuntimeError("Missing dependency: google-genai. Install it with 'pip install google-genai'.")
-        self.client = genai.Client(api_key=self.api_key) if self._is_gemini_api_key(self.api_key) else None
+        self.client = (
+            genai.Client(api_key=self.api_key)
+            if self.protocol == "gemini" and self._is_gemini_api_key(self.api_key)
+            else None
+        )
 
     def key_status(self) -> dict[str, object]:
+        if self.protocol in {"openai-compatible", "anthropic"} and (self.api_key or self.provider in LOCAL_PROVIDERS):
+            return {
+                "provider": self.provider,
+                "base_url": self.base_url,
+                "model": self.model,
+                "custom_active": self.config.user_env_file.exists(),
+                "mode": "custom",
+                "message": f"🔒 User override active: {self.model} via {self.provider}.",
+            }
+        if self.protocol in {"openai-compatible", "anthropic"}:
+            return {
+                "provider": self.provider,
+                "base_url": self.base_url,
+                "model": self.model,
+                "custom_active": False,
+                "mode": "missing",
+                "message": "⚠️ No API key is loaded for the selected provider.",
+            }
         if self.api_key and self.client is None:
             return {
+                "provider": self.provider,
                 "custom_active": self.config.user_env_file.exists(),
                 "mode": "invalid",
                 "message": "⚠️ Invalid Gemini API key format. Use a Google AI Studio API key, not an OAuth token.",
             }
         if self.config.user_env_file.exists():
             return {
+                "provider": self.provider,
                 "custom_active": True,
                 "mode": "custom",
                 "message": "🔒 User override active: this session is using a personal Gemini API key.",
             }
         if self.api_key:
             return {
+                "provider": self.provider,
                 "custom_active": False,
                 "mode": "evaluation",
                 "message": "⚡ Evaluation key active: temporary pilot token is in use.",
             }
         return {
+            "provider": self.provider,
             "custom_active": False,
             "mode": "missing",
-            "message": "⚠️ No API key is loaded. Please paste a Gemini API key from Google AI Studio in the dashboard.",
+            "message": "⚠️ No API key is loaded. Please configure an API key in the dashboard.",
         }
 
-    def save_api_key(self, key: str) -> None:
+    def save_api_key(self, key: str, provider: str = "gemini", base_url: str = "", model: str = "") -> None:
         key = key.strip()
-        if not self._is_gemini_api_key(key):
+        provider = provider.strip() or "gemini"
+        if provider != "gemini" and provider != "anthropic" and provider not in OPENAI_COMPATIBLE_PROVIDERS:
+            raise ValueError("Please choose a supported API provider.")
+        if provider == "gemini" and not self._is_gemini_api_key(key):
             raise ValueError(
                 "Please use a Gemini API key from Google AI Studio, "
                 "not an OAuth access token or bearer token."
             )
+        if provider != "gemini":
+            parsed_url = urlparse(base_url.strip())
+            if not base_url.strip() or not model.strip():
+                raise ValueError("An API base URL and model name are required for this provider.")
+            if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
+                raise ValueError("The API base URL must be a complete HTTP or HTTPS URL.")
 
         with open(self.config.user_env_file, "w", encoding="utf-8") as env_file:
-            env_file.write(f"GOOGLE_API_KEY={key}\n")
+            env_file.write(f"API_PROVIDER={provider}\n")
+            if provider == "gemini":
+                env_file.write(f"GOOGLE_API_KEY={key}\n")
+            elif provider == "anthropic":
+                env_file.write(f"ANTHROPIC_API_KEY={key}\n")
+                env_file.write(f"ANTHROPIC_BASE_URL={base_url.strip().rstrip('/')}\n")
+                env_file.write(f"ANTHROPIC_MODEL={model.strip()}\n")
+            else:
+                env_file.write(f"OPENAI_API_KEY={key}\n")
+                env_file.write(f"OPENAI_BASE_URL={base_url.strip().rstrip('/')}\n")
+                env_file.write(f"OPENAI_MODEL={model.strip()}\n")
 
-        os.environ["GOOGLE_API_KEY"] = key
+        os.environ["API_PROVIDER"] = provider
+        os.environ["GOOGLE_API_KEY"] = key if provider == "gemini" else ""
+        os.environ["OPENAI_API_KEY"] = key if provider in OPENAI_COMPATIBLE_PROVIDERS else ""
+        os.environ["OPENAI_BASE_URL"] = base_url.strip().rstrip("/")
+        os.environ["OPENAI_MODEL"] = model.strip()
+        os.environ["ANTHROPIC_API_KEY"] = key if provider == "anthropic" else ""
+        os.environ["ANTHROPIC_BASE_URL"] = base_url.strip().rstrip("/")
+        os.environ["ANTHROPIC_MODEL"] = model.strip()
+        self.provider = provider
+        self.protocol = "gemini" if provider == "gemini" else ("anthropic" if provider == "anthropic" else "openai-compatible")
         self.api_key = key
-        self.client = genai.Client(api_key=key)
+        self.base_url = base_url.strip().rstrip("/")
+        self.model = model.strip() or "gemini-3.8-flash"
+        self.client = genai.Client(api_key=key) if provider == "gemini" else None
 
     @staticmethod
     def _is_gemini_api_key(key: str) -> bool:
@@ -191,23 +261,87 @@ class PromptService:
         # validate the opaque key rather than enforcing a prefix or length.
         return bool(key)
 
-    def generate(self, subject: str, framework: str) -> str:
-        if self.client is None:
+    def _ensure_provider_ready(self) -> None:
+        if self.protocol == "gemini" and self.client is None:
             raise RuntimeError("No API client is active. Please save a valid Gemini key from the UI first.")
+        if self.protocol in {"openai-compatible", "anthropic"} and (not self.base_url or not self.model):
+            raise RuntimeError("Please configure an API key, base URL, and model for the selected provider.")
+        if self.provider not in LOCAL_PROVIDERS and self.protocol in {"openai-compatible", "anthropic"} and not self.api_key:
+            raise RuntimeError("Please configure an API key for the selected provider.")
+
+    def _generate_text(self, prompt: str) -> str:
+        if self.protocol == "gemini":
+            response = self.client.models.generate_content(model=self.model, contents=prompt)
+            return response.text
+
+        if self.protocol == "anthropic":
+            endpoint_base = self.base_url.rstrip("/")
+            if not endpoint_base.endswith("/v1"):
+                endpoint_base += "/v1"
+            endpoint = f"{endpoint_base}/messages"
+            request = Request(
+                endpoint,
+                data=json.dumps({
+                    "model": self.model,
+                    "max_tokens": 4096,
+                    "messages": [{"role": "user", "content": prompt}],
+                }).encode("utf-8"),
+                headers={
+                    "x-api-key": self.api_key,
+                    "anthropic-version": "2023-06-01",
+                    "Content-Type": "application/json",
+                },
+                method="POST",
+            )
+            try:
+                with urlopen(request, timeout=120) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+            except HTTPError as exc:
+                detail = exc.read().decode("utf-8", errors="replace")
+                raise RuntimeError(f"Anthropic API request failed ({exc.code}): {detail[:300]}") from exc
+            try:
+                return "".join(item["text"] for item in payload["content"] if item.get("type") == "text")
+            except (KeyError, TypeError) as exc:
+                raise RuntimeError("Anthropic returned an unexpected response format.") from exc
+
+        request = Request(
+            f"{self.base_url}/chat/completions",
+            data=json.dumps({
+                "model": self.model,
+                "messages": [{"role": "user", "content": prompt}],
+            }).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+        try:
+            with urlopen(request, timeout=120) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"OpenAI-compatible API request failed ({exc.code}): {detail[:300]}") from exc
+
+        try:
+            return payload["choices"][0]["message"]["content"]
+        except (KeyError, IndexError, TypeError) as exc:
+            raise RuntimeError("The selected API returned an unexpected response format.") from exc
+
+    def generate(self, subject: str, framework: str) -> str:
+        self._ensure_provider_ready()
 
         framework_details = FRAMEWORKS.get(framework, FRAMEWORKS["RACE"])
         prompt = BASELINE_PROMPT_TEMPLATE.replace("{subject}", subject).replace(
             "{framework_name}", framework_details
         )
-        response = self.client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
-        result = response.text
+        result = self._generate_text(prompt)
         with open(self.config.output_file, "a", encoding="utf-8") as output:
             output.write(f"--- FRAMEWORK: {framework} | SUBJECT: {subject} ---\n{result}\n\n")
         return result
 
     def generate_iterative(self, blueprint: ProjectBlueprint, task: WorkflowTask) -> str:
-        if self.client is None:
-            raise RuntimeError("No API client is active. Please save a valid Gemini key from the UI first.")
+        self._ensure_provider_ready()
         if not blueprint.name or not blueprint.summary:
             raise ValueError("A project name and summary are required before generating a workflow prompt.")
         if not task.title or not task.description:
@@ -251,15 +385,13 @@ PROMPT REQUIREMENTS
 - Include tests, validation steps, edge cases, and integration notes.
 - State assumptions and unknowns explicitly.
 """
-        response = self.client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
-        result = response.text
+        result = self._generate_text(prompt)
         with open(self.config.output_file, "a", encoding="utf-8") as output:
             output.write(f"--- ITERATIVE BUILD: {blueprint.name} / {task.title} ---\n{result}\n\n")
         return result
 
     def enhance(self, existing_prompt: str, framework: str, enhancement_request: str = "") -> str:
-        if self.client is None:
-            raise RuntimeError("No API client is active. Please save a valid Gemini key from the UI first.")
+        self._ensure_provider_ready()
         if not existing_prompt.strip():
             raise ValueError("An existing Super Prompt is required before enhancement.")
 
@@ -269,8 +401,7 @@ PROMPT REQUIREMENTS
             enhancement_request=enhancement_request.strip() or "Improve the prompt using the selected framework without changing its intent.",
             existing_prompt=existing_prompt,
         )
-        response = self.client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
-        result = response.text
+        result = self._generate_text(prompt)
         with open(self.config.output_file, "a", encoding="utf-8") as output:
             output.write(f"--- ENHANCED FRAMEWORK: {framework} ---\n{result}\n\n")
         return result

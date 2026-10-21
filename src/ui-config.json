@@ -1,18 +1,31 @@
 {
   "application": {
-    "name": "PromptCrusher Pro",
+    "name": "Prompt Framer",
     "version": "1.0.0-beta",
     "environment": "distribution"
   },
+  "providers": [
+    { "value": "gemini", "label": "Google Gemini" },
+    { "value": "openai", "label": "OpenAI" },
+    { "value": "anthropic", "label": "Anthropic Claude" },
+    { "value": "openrouter", "label": "OpenRouter" },
+    { "value": "groq", "label": "Groq" },
+    { "value": "mistral", "label": "Mistral AI" },
+    { "value": "deepseek", "label": "DeepSeek" },
+    { "value": "xai", "label": "xAI Grok" },
+    { "value": "ollama", "label": "Ollama (Local)" },
+    { "value": "lmstudio", "label": "LM Studio (Local)" },
+    { "value": "openai-compatible", "label": "Custom OpenAI-compatible API" }
+  ],
   "security_limits": {
     "subject_max_length": 200,
     "api_rate_limit_rpm": 15
   },
   "ui_strings": {
-    "title_heading": "💥 Prompt Crusher Pro",
+    "title_heading": "Prompt Framer",
     "subtitle_description": "Select an architecture framework and turn a short idea into an optimized standalone prompt for structured data, software, agents, research, stories, posters, video, and interactive 3D.",
     "input_placeholder": "e.g., build a research-backed launch plan with cited sources and measurable steps",
     "btn_text_idle": "Generate Super Prompt",
-    "btn_text_loading": "Crushing Prompt Matrix... Please Wait..."
+    "btn_text_loading": "Framing Prompt... Please Wait..."
   }
 }

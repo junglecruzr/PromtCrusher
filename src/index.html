@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prompt Crusher Pro</title>
+  <title>Prompt Framer</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <div class="container">
     <div class="header-row">
-      <h1>💥 Prompt Crusher Pro</h1>
+      <h1>Prompt Framer</h1>
       <nav class="help-links" aria-label="Help links">
         <a class="help-link" href="/help.html">Quick Mode Help</a>
         <a class="help-link" href="/workflow-help.html">Software Blueprinting</a>
@@ -18,8 +18,28 @@
     <p class="subtitle">Select your architecture framework and feed subjects to generate optimized standalone Super Prompts.</p>
 
     <div class="key-panel">
-      <label>Custom API Key Override (Optional)</label>
-       <p class="helper-text">Paste a Gemini API key from Google AI Studio. OAuth access tokens are not supported.</p>
+      <label for="api-provider-select">API Provider</label>
+      <select id="api-provider-select">
+        <option value="gemini" selected>Google Gemini</option>
+        <option value="openai">OpenAI</option>
+        <option value="anthropic">Anthropic Claude</option>
+        <option value="openrouter">OpenRouter</option>
+        <option value="groq">Groq</option>
+        <option value="mistral">Mistral AI</option>
+        <option value="deepseek">DeepSeek</option>
+        <option value="xai">xAI Grok</option>
+        <option value="ollama">Ollama (Local)</option>
+        <option value="lmstudio">LM Studio (Local)</option>
+        <option value="openai-compatible">Custom OpenAI-compatible API</option>
+      </select>
+      <label for="api-key-input">Custom API Key Override (Optional)</label>
+       <p class="helper-text" id="api-key-help">Paste a Gemini API key from Google AI Studio. OAuth access tokens are not supported.</p>
+      <div id="openai-settings" hidden>
+        <label for="api-base-url">API Base URL</label>
+        <input type="url" id="api-base-url" value="https://api.openai.com/v1" placeholder="https://api.openai.com/v1">
+        <label for="api-model">Model</label>
+        <input type="text" id="api-model" value="gpt-4o-mini" placeholder="e.g., gpt-4o-mini">
+      </div>
       <div class="key-row">
         <input type="password" id="api-key-input" placeholder="Paste your Google AI Studio API key">
         <button class="btn" id="save-key-btn">Apply API Key</button>

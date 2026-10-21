@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-taskkill /F /IM ProCrushFV01.exe /T 2>nul
+taskkill /F /IM PromptFramer.exe /T 2>nul
 
 echo IMPORTANT: This is a temporary evaluation build.
  echo The API key is only for the pilot evaluation window and should be replaced later by each user.
@@ -18,7 +18,7 @@ if not defined GOOGLE_API_KEY (
 )
 
 echo 📦 Building Isolated Standalone Target Executable...
-pyinstaller --clean --noconsole --onefile --name "ProCrushFV01" --add-data "src;src" main.py
+pyinstaller --clean --noconsole --onefile --name "PromptFramer" --add-data "src;src" main.py
 
 REM Clear the temporary evaluation key from this shell before exit.
 set GOOGLE_API_KEY=

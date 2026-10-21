@@ -44,3 +44,30 @@ class AppConfig:
                 return key.strip()
 
         return (os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY") or "").strip()
+
+    def resolve_provider_settings(self) -> dict[str, str]:
+        self.resolve_api_key()
+        provider = os.getenv("API_PROVIDER", "gemini").strip() or "gemini"
+        if provider == "anthropic":
+            return {
+                "provider": provider,
+                "protocol": "anthropic",
+                "api_key": os.getenv("ANTHROPIC_API_KEY", "").strip(),
+                "base_url": os.getenv("ANTHROPIC_BASE_URL", "https://api.anthropic.com/v1").strip(),
+                "model": os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-20250514").strip(),
+            }
+        if provider != "gemini":
+            return {
+                "provider": provider,
+                "protocol": "openai-compatible",
+                "api_key": os.getenv("OPENAI_API_KEY", "").strip(),
+                "base_url": os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").strip(),
+                "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip(),
+            }
+        return {
+            "provider": "gemini",
+            "protocol": "gemini",
+            "api_key": self.resolve_api_key(),
+            "base_url": "",
+            "model": "gemini-3.8-flash",
+        }

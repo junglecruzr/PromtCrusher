@@ -107,15 +107,18 @@ class PromptRequestHandler(BaseHTTPRequestHandler):
         if path == "save-key":
             data = json.loads(post_data.decode("utf-8"))
             new_key = data.get("key", "").strip()
-            if not new_key:
+            provider = data.get("provider", "gemini")
+            base_url = data.get("base_url", "")
+            model = data.get("model", "")
+            if not new_key and provider not in {"ollama", "lmstudio"}:
                 self._send_json(
-                    {"status": "error", "message": "⚠️ Input Error: Please paste a Gemini API key first."},
+                    {"status": "error", "message": "⚠️ Input Error: Please paste an API key first."},
                     status=400,
                 )
                 return
 
             try:
-                service.save_api_key(new_key)
+                service.save_api_key(new_key, provider, base_url, model)
             except ValueError as exc:
                 self._send_json({"status": "error", "message": f"⚠️ Input Error: {exc}"}, status=400)
                 return

@@ -28,7 +28,7 @@ def show_message_box(title: str, message: str, style: int = 0) -> None:
 def main() -> None:
     if datetime.date.today() > EXPIRATION_DATE:
         show_message_box(
-            "PromptCrusher Beta - Expired Build",
+            "Prompt Framer Beta - Expired Build",
             "This test distribution build has EXPIRED.\n\nPlease contact the developer for an updated release version.",
             0x10,
         )
@@ -38,7 +38,7 @@ def main() -> None:
     service = PromptService(config)
     if not service.api_key:
         show_message_box(
-            "PromptCrusher - Configuration Warning",
+            "Prompt Framer - Configuration Warning",
             "No GOOGLE_API_KEY was found. The local UI will start and let you apply a Gemini API key from the dashboard.",
             0x40,
         )
