@@ -1,6 +1,7 @@
 import os
 
 from app_config import AppConfig
+from workflows.models import ProjectBlueprint, WorkflowTask
 
 try:
     from google import genai
@@ -202,6 +203,58 @@ class PromptService:
         result = response.text
         with open(self.config.output_file, "a", encoding="utf-8") as output:
             output.write(f"--- FRAMEWORK: {framework} | SUBJECT: {subject} ---\n{result}\n\n")
+        return result
+
+    def generate_iterative(self, blueprint: ProjectBlueprint, task: WorkflowTask) -> str:
+        if self.client is None:
+            raise RuntimeError("No API client is active. Please save a valid Gemini key from the UI first.")
+        if not blueprint.name or not blueprint.summary:
+            raise ValueError("A project name and summary are required before generating a workflow prompt.")
+        if not task.title or not task.description:
+            raise ValueError("A workflow task title and description are required.")
+
+        def bullets(values: list[str]) -> str:
+            return "\n".join(f"- {value}" for value in values) or "- None specified"
+
+        prompt = f"""You are a principal software engineer continuing an incremental project.
+Generate one complete, implementation-ready prompt for the next development task.
+Do not implement the code yourself. Return only the prompt that another coding AI should follow.
+
+PROJECT BLUEPRINT
+Name: {blueprint.name}
+Summary: {blueprint.summary}
+Technology stack:
+{bullets(blueprint.stack)}
+Architecture modules:
+{bullets(blueprint.modules)}
+Roadmap phases:
+{bullets(blueprint.phases)}
+Coding constraints:
+{bullets(blueprint.constraints)}
+
+CURRENT PHASE
+{task.phase or "Not specified"}
+
+CURRENT TASK
+Title: {task.title}
+Description: {task.description}
+Target files:
+{bullets(task.target_files)}
+Acceptance criteria:
+{bullets(task.acceptance_criteria)}
+
+PROMPT REQUIREMENTS
+- Inspect the existing project before changing code.
+- Preserve the blueprint architecture and unrelated behavior.
+- Do not invent dependencies, files, or APIs without explaining why.
+- Provide complete implementation instructions with no TODO placeholders.
+- Include tests, validation steps, edge cases, and integration notes.
+- State assumptions and unknowns explicitly.
+"""
+        response = self.client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
+        result = response.text
+        with open(self.config.output_file, "a", encoding="utf-8") as output:
+            output.write(f"--- ITERATIVE BUILD: {blueprint.name} / {task.title} ---\n{result}\n\n")
         return result
 
     def enhance(self, existing_prompt: str, framework: str, enhancement_request: str = "") -> str:

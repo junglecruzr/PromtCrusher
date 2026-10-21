@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Crusher — Software Blueprinting Guide</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .help-nav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .help-nav a { color: #93c5fd; text-decoration: none; font-weight: 600; }
+    .help-nav a:hover { text-decoration: underline; }
+    .help-section { border-top: 1px solid var(--border); padding: 1.5rem 0; }
+    .help-section:first-of-type { border-top: 0; padding-top: 0; }
+    h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+    h3 { color: #bfdbfe; font-size: 1rem; margin: 1.25rem 0 0.5rem; }
+    p, li { color: #cbd5e1; line-height: 1.6; }
+    ul, ol { padding-left: 1.5rem; margin-top: 0.5rem; }
+    .workflow-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; margin-top: 0.75rem; }
+    .workflow-card strong { color: #f8fafc; }
+    code { color: #bfdbfe; background: var(--bg-input); border-radius: 4px; padding: 0.1rem 0.3rem; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="help-nav"><a href="/help.html">← General Help</a><a href="/">Prompt Crusher</a></div>
+    <h1>Software Blueprinting</h1>
+    <p class="subtitle">Use a saved project blueprint and focused implementation tasks to guide an AI through a complex application one phase at a time.</p>
+
+    <section class="help-section">
+      <h2>When to use this mode</h2>
+      <p>Use <strong>Quick Prompt</strong> for a single request. Use <strong>Software Blueprinting</strong> for larger projects such as a graphics editor, SaaS product, game, or multi-module application.</p>
+      <p>The iterative workflow keeps the architecture, roadmap, constraints, and current task together without asking the AI to generate an entire complex application in one response.</p>
+    </section>
+
+    <section class="help-section">
+      <h2>Getting started</h2>
+      <ol>
+        <li>Select <strong>Software Blueprinting</strong> from <strong>Prompt Mode</strong>.</li>
+        <li>Enter the project name and a concise product summary.</li>
+        <li>Enter the technology stack, architecture modules, roadmap phases, and coding constraints. Use one item per line.</li>
+        <li>Select <strong>Save Blueprint</strong>. The blueprint is stored locally for the next session.</li>
+        <li>Enter the current phase, task title, detailed task description, target files, and acceptance criteria.</li>
+        <li>Select <strong>Generate Super Prompt</strong> to create the focused implementation prompt.</li>
+      </ol>
+    </section>
+
+    <section class="help-section">
+      <h2>Example: Photocraft</h2>
+      <div class="workflow-card">
+        <strong>Project summary</strong>
+        <p>A browser-based raster and vector graphics editor with layers, tools, history, and non-destructive filters.</p>
+      </div>
+      <div class="workflow-card">
+        <strong>Roadmap phases</strong>
+        <p>Foundation, canvas and layers, brush and eraser tools, history, selections, and WebGL filters.</p>
+      </div>
+      <div class="workflow-card">
+        <strong>First task</strong>
+        <p>Create the canvas layer manager with create, delete, reorder, visibility, and normal-blend rendering support.</p>
+      </div>
+    </section>
+
+    <section class="help-section">
+      <h2>What the generated prompt contains</h2>
+      <ul>
+        <li>The project architecture and technology context.</li>
+        <li>The current phase and specific implementation task.</li>
+        <li>Target files and acceptance criteria.</li>
+        <li>Requirements to inspect existing code and preserve unrelated behavior.</li>
+        <li>Testing, validation, edge cases, assumptions, and integration notes.</li>
+      </ul>
+    </section>
+
+    <section class="help-section">
+      <h2>Local project data</h2>
+      <p>The active blueprint is saved locally at <code>projects/active_blueprint.json</code>. It is excluded from Git and should not contain API keys, passwords, or other secrets.</p>
+      <p>Update the blueprint as the project architecture changes, then generate one focused task prompt at a time.</p>
+    </section>
+  </main>
+</body>
+</html>

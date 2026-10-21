@@ -13,6 +13,32 @@
   --shadow: rgba(0, 0, 0, 0.4);
 }
 
+.workflow-panel,
+.iterative-task-panel {
+  margin-bottom: 2rem;
+}
+
+.iterative-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.iterative-panel textarea,
+.iterative-panel input {
+  margin-bottom: 1rem;
+}
+
+.btn-secondary {
+  background: #334155;
+}
+
+.btn-secondary:hover {
+  background: #475569;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -63,6 +89,13 @@ h1 {
 
 .help-link:hover {
   text-decoration: underline;
+}
+
+.help-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
 }
 
 .subtitle {

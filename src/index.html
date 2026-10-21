@@ -10,7 +10,10 @@
   <div class="container">
     <div class="header-row">
       <h1>💥 Prompt Crusher Pro</h1>
-      <a class="help-link" href="/help.html">Help</a>
+      <nav class="help-links" aria-label="Help links">
+        <a class="help-link" href="/help.html">Quick Mode Help</a>
+        <a class="help-link" href="/workflow-help.html">Software Blueprinting</a>
+      </nav>
     </div>
     <p class="subtitle">Select your architecture framework and feed subjects to generate optimized standalone Super Prompts.</p>
 
@@ -22,6 +25,30 @@
         <button class="btn" id="save-key-btn">Apply API Key</button>
       </div>
       <div id="key-status-msg" class="status-message" aria-live="polite"></div>
+    </div>
+
+    <div class="workflow-panel">
+      <label for="prompt-mode">Prompt Mode</label>
+      <select id="prompt-mode">
+        <option value="quick" selected>Quick Prompt</option>
+        <option value="iterative">Software Blueprinting</option>
+      </select>
+
+      <div id="iterative-panel" class="iterative-panel" hidden>
+        <label for="project-name">Project Name</label>
+        <input type="text" id="project-name" placeholder="e.g., Photocraft">
+        <label for="project-summary">Project Summary</label>
+        <textarea id="project-summary" rows="3" placeholder="Describe the product and its intended users."></textarea>
+        <label for="project-stack">Technology Stack</label>
+        <textarea id="project-stack" rows="2" placeholder="One item per line: TypeScript, Canvas, WebGL"></textarea>
+        <label for="project-modules">Architecture Modules</label>
+        <textarea id="project-modules" rows="2" placeholder="One item per line: UI, engine, state, filters"></textarea>
+        <label for="project-phases">Roadmap Phases</label>
+        <textarea id="project-phases" rows="2" placeholder="One item per line: Foundation, Tools, History"></textarea>
+        <label for="project-constraints">Coding Constraints</label>
+        <textarea id="project-constraints" rows="2" placeholder="One item per line: strict TypeScript, no placeholders"></textarea>
+        <button class="btn btn-secondary" id="save-blueprint-btn" type="button">Save Blueprint</button>
+      </div>
     </div>
 
     <div class="grid">
@@ -54,6 +81,19 @@
       </div>
     </div>
 
+    <div id="iterative-task-panel" class="iterative-panel" hidden>
+      <label for="task-phase">Current Phase</label>
+      <input type="text" id="task-phase" placeholder="e.g., Phase 1: Foundation">
+      <label for="task-title">Task Title</label>
+      <input type="text" id="task-title" placeholder="e.g., Create the canvas layer manager">
+      <label for="task-description">Task Description</label>
+      <textarea id="task-description" rows="4" placeholder="Describe the exact implementation task."></textarea>
+      <label for="task-files">Target Files</label>
+      <textarea id="task-files" rows="2" placeholder="One file per line"></textarea>
+      <label for="task-criteria">Acceptance Criteria</label>
+      <textarea id="task-criteria" rows="3" placeholder="One criterion per line"></textarea>
+    </div>
+
     <button class="btn" id="generate-btn">Generate Super Prompt</button>
 
     <div class="output-box" id="output-container">
@@ -71,5 +111,6 @@
   </div>
 
   <script type="module" src="/app.js"></script>
+  <script type="module" src="/iterative.js"></script>
 </body>
 </html>

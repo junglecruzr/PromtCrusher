@@ -8,6 +8,8 @@ from typing import cast
 
 from app_config import AppConfig
 from prompt_service import PromptService
+from workflows.blueprint_service import BlueprintService
+from workflows.models import WorkflowTask
 
 
 class PromptHTTPServer(socketserver.TCPServer):
@@ -16,6 +18,7 @@ class PromptHTTPServer(socketserver.TCPServer):
     def __init__(self, server_address, config: AppConfig, service: PromptService) -> None:
         self.config = config
         self.service = service
+        self.blueprints = BlueprintService(config)
         super().__init__(server_address, PromptRequestHandler)
 
 
@@ -44,6 +47,9 @@ class PromptRequestHandler(BaseHTTPRequestHandler):
         elif path == "app.js":
             file_to_serve = src_dir / "app.js"
             content_type = "application/javascript"
+        elif path == "iterative.js":
+            file_to_serve = src_dir / "iterative.js"
+            content_type = "application/javascript"
         elif path == "styles.css":
             file_to_serve = src_dir / "styles.css"
             content_type = "text/css"
@@ -53,8 +59,14 @@ class PromptRequestHandler(BaseHTTPRequestHandler):
         elif path == "help.html":
             file_to_serve = src_dir / "help.html"
             content_type = "text/html"
+        elif path == "workflow-help.html":
+            file_to_serve = src_dir / "workflow-help.html"
+            content_type = "text/html"
         elif path == "check-key":
             self._send_json(self.app_server.service.key_status())
+            return
+        elif path == "blueprint":
+            self._send_json(self.app_server.blueprints.load().to_dict())
             return
         elif path == "log":
             self._send_json({"content": self.app_server.service.read_output()})
@@ -108,6 +120,26 @@ class PromptRequestHandler(BaseHTTPRequestHandler):
                 self._send_json({"status": "error", "message": f"⚠️ Input Error: {exc}"}, status=400)
                 return
             self._send_json({"status": "success"})
+            return
+
+        if path == "blueprint":
+            try:
+                blueprint = self.app_server.blueprints.save(json.loads(post_data.decode("utf-8")))
+                self._send_json({"status": "success", "blueprint": blueprint.to_dict()})
+            except (ValueError, json.JSONDecodeError) as exc:
+                self._send_json({"status": "error", "message": str(exc)}, status=400)
+            return
+
+        if path == "iterative":
+            try:
+                data = json.loads(post_data.decode("utf-8"))
+                blueprint = self.app_server.blueprints.load()
+                result = service.generate_iterative(blueprint, WorkflowTask.from_dict(data))
+                self._send_json({"status": "success", "prompt": result})
+            except (ValueError, json.JSONDecodeError) as exc:
+                self._send_json({"status": "error", "message": str(exc)}, status=400)
+            except Exception as exc:
+                self._send_json({"status": "error", "message": service.error_message(exc)})
             return
 
         if path == "enhance":

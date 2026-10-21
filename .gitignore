@@ -11,6 +11,7 @@ __pycache__/
 
 # Runtime-generated application output
 prompt_automation_output.txt
+projects/
 
 # Build artifacts
 build/
